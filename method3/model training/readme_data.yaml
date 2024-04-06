@@ -1,0 +1,50 @@
+#### pothole data.yaml
+
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['pothole']
+
+roboflow:
+  workspace: brad-dwyer
+  project: pothole-voxrl
+  version: 1
+  license: ODbL v1.0
+  url: https://universe.roboflow.com/brad-dwyer/pothole-voxrl/dataset/1
+
+
+#### 11 class data.yaml
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 11
+names: ['biker', 'car', 'pedestrian', 'trafficLight', 'trafficLight-Green', 'trafficLight-GreenLeft', 'trafficLight-Red', 'trafficLight-RedLeft', 'trafficLight-Yellow', 'trafficLight-YellowLeft', 'truck']
+
+roboflow:
+  workspace: roboflow-gw7yv
+  project: self-driving-car
+  version: 3
+  license: MIT
+  url: https://universe.roboflow.com/roboflow-gw7yv/self-driving-car/dataset/3
+
+
+
+#####final data.yaml file
+
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+
+#### merged 12 class data.yaml
+nc: 12
+names: ['biker', 'car', 'pedestrian', 'trafficLight', 'trafficLight-Green', 'trafficLight-GreenLeft', 'trafficLight-Red', 'trafficLight-RedLeft', 'trafficLight-Yellow', 'trafficLight-YellowLeft', 'truck', 'pothole']
+
+roboflow:
+  workspace: roboflow-gw7yv
+  project: self-driving-car
+  version: 3
+  license: MIT

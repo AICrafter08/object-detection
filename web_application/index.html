@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <!-- Spinner Overlay (hidden by default) -->
+        <div id="spinner-overlay" style="display: none; position: fixed; top: 0; left: 0; height: 100%; width: 100%; background: rgba(255, 255, 255, 0.5); z-index: 1050; justify-content: center; align-items: center;">
+            <div>
+                <div class="spinner-border" role="status"></div>
+                <div style="text-align: center; margin-top: 10px;">Loading...</div>
+            </div>
+        </div>
+
+        <!-- Row 1: Upload Video -->
+        <div class="row">
+            <div class="col-12">
+                <div class="box">
+                    <h2 style="text-align: center;">Object Detection using Pretrained Yolo8n Model</h2>
+                    <input type="file" accept="video/*" class="form-control" id="fileInput">
+                    <div style="display: flex; justify-content: center;">
+                        <button style='width: 200px;font-size: 20px;' class="btn btn-primary mt-2" onclick="saveAndProcess()">Process</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Visualizations and Tracking IDs -->
+        <div class="row">
+            <div class="col-6">
+                <h2>Vehicle Count Visualization</h2>
+                <div class="box">
+
+                    <div id="data-visualization", style="padding-top: 20px;"></div>
+                </div>
+            </div>
+            <div class="col-6">
+                <h2>Tracking IDs</h2>
+                <div class="box">
+                    <div id="dictionary-data"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 3: Uploaded and Processed Video -->
+        <div class="row">
+            <div class="col-6">
+                <div class="large">
+                    <h2>Uploaded Video</h2>
+                    <div id="video-container" class="video-container">
+                        <video id="uploadedVideo" controls>
+                            <source src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="large">
+                    <h2>Processed Video</h2>
+                    <div id="processed-video-container" class="video-container">
+                        <video id="processedVideo" controls>
+                            <source src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="myscripts.js"></script>
+</body>
+
+</html>
